@@ -21,16 +21,6 @@
         同时具备 Java、Spring Boot、MySQL 的后端基础，目标成为能独立完成前后端项目的全栈开发者。
       </p>
     </div>
-
-    <div class="about-section">
-      <h3>本实验（实验三）说明</h3>
-      <ul class="about-list">
-        <li>使用 Vue Router 配置基础路由、动态路由与嵌套路由；</li>
-        <li>顶部导航通过 RouterLink 跳转，并实现导航高亮；</li>
-        <li>项目详情页通过 useRoute() 获取动态参数，配合 useRouter() 完成编程式导航；</li>
-        <li>通过 meta 与全局前置守卫 beforeEach 更新页面标题并实现后台访问控制。</li>
-      </ul>
-    </div>
   </div>
 </template>
 

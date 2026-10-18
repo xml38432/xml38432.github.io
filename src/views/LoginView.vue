@@ -8,7 +8,7 @@
     <form class="edit-form login-form" @submit.prevent="handleLogin">
       <div class="form-group">
         <label for="username">用户名：</label>
-        <input id="username" type="text" v-model.trim="username" placeholder="请输入用户名" />
+        <input id="username" type="text" v-model.trim="username" placeholder="请输入账号：Xml38432" />
       </div>
       <div class="form-group">
         <label for="password">密码：</label>
@@ -22,7 +22,7 @@
         <button type="button" class="btn-secondary" @click="goHome">返回首页</button>
       </div>
 
-      <p class="tip">提示：任意用户名 + 密码 123456 即可登录（本实验为前端模拟登录）。</p>
+      <p class="tip">提示：账号 Xml38432 + 密码 123456 即可登录（本实验为前端模拟登录）。</p>
     </form>
   </div>
 </template>
@@ -44,6 +44,11 @@ const handleLogin = () => {
   // 简单表单校验
   if (!username.value) {
     error.value = '请输入用户名'
+    return
+  }
+  // 账号校验：只允许 Xml38432 登录（不区分大小写）
+  if (username.value.toLowerCase() !== 'xml38432') {
+    error.value = '账号错误（请使用指定账号登录）'
     return
   }
   if (password.value !== '123456') {
