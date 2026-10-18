@@ -8,11 +8,11 @@
     <form class="edit-form login-form" @submit.prevent="handleLogin">
       <div class="form-group">
         <label for="username">用户名：</label>
-        <input id="username" type="text" v-model.trim="username" placeholder="请输入账号：Xml38432" />
+        <input id="username" type="text" v-model.trim="username" />
       </div>
       <div class="form-group">
         <label for="password">密码：</label>
-        <input id="password" type="password" v-model.trim="password" placeholder="演示密码:123456" />
+        <input id="password" type="password" v-model.trim="password" />
       </div>
 
       <p class="error" v-if="error">{{ error }}</p>
@@ -21,8 +21,6 @@
         <button type="submit">登录</button>
         <button type="button" class="btn-secondary" @click="goHome">返回首页</button>
       </div>
-
-      <p class="tip">提示：账号 Xml38432 + 密码 123456 即可登录（本实验为前端模拟登录）。</p>
     </form>
   </div>
 </template>
@@ -168,17 +166,6 @@ const goHome = () => {
 #app.dark .error {
   background: #4a1a1a;
   color: #ef5350;
-}
-
-.tip {
-  color: #999;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 16px;
-}
-
-#app.dark .tip {
-  color: #777;
 }
 
 button {
